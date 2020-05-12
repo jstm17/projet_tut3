@@ -164,6 +164,13 @@ $(document).ready(function(){
         $(".pointnb").removeClass("pointhover")
 
     });
+
+    $(".réseaux,.algo,.base,.intégration,.sound").click(function(){
+        $(".billetecole").hide();
+        // On affiche les billets correspondant au filtre
+        $(".billet-".$(this).attr("id")).show()
+        });
+        
     $(".algo").hover(function(){
         $(this).removeClass("domaine2")
         $(this).addClass("domainehover")
@@ -174,13 +181,6 @@ $(document).ready(function(){
         $(this).removeClass("domainehover")
         $(".pointn2b").removeClass("pointhover")
     });
-
-    // $(".réseaux,.algo,.base,.intégration,.sound").click(function(){
-    //     $(".billetecole").hide();
-    //     // On affiche les billets correspondant au filtre
-    //     $(".billet-".$(this).attr("id")).show()
-    //     });
-
     $(".base").hover(function(){
         $(this).removeClass("domaine2")
         $(this).addClass("domainehover")
@@ -427,7 +427,7 @@ $(".pointn3b").hover(function(){
             "transition": "ease, transform 1.5s"
         })
         $(".rer4ecole").css({
-            "transform": "translate(48.8%, 40vw)",
+            "transform": "translate(48.8%, 66vw)",
             "transition": "ease, transform 1.5s"
         })
 
@@ -615,7 +615,7 @@ $(".bouton3").click(function(){
 
 $(".bouton4").click(function(){
     $(".rer3").css({
-        "transform":"translate(25%, -0vw)",
+        "transform":"translate(25%, -65vw)",
         "transition":"ease, transform 1.5s",
     })
     $("html").css({
@@ -673,7 +673,7 @@ $(".rer3ecole").hover(function(){
         // $(".railbleu3haut").addClass("railsaturate")
         $(".railbleu3haut").addClass("railmouseout railsaturate")
         $(".railbleu3haut").removeClass("railhover")
-        // $(".rer4ecole").css({"display":"none"})
+        $(".rer4ecole").css({"display":"none"})
     })
 
     $(".railbleulicence,.billetlicence").hover(function(){
@@ -706,7 +706,7 @@ $(".bouton6").click(function(){
         "overflow-y":"scroll"
     })
     $(".rer4ecole").css({
-        "transform": "translate(10%, -27vw)",
+        "transform": "translate(10%, 0vw)",
         "transition": "ease, transform 1.5s"
     })
     $(".railbleu").addClass("railombre")
@@ -732,7 +732,7 @@ $(".rer4ecole").hover(function(){
         $(".railvert").removeClass("railsaturate")
         $(".railvert").addClass("railmouseout")
         $(".rer4ecole").css({
-            "transform": "translate(48%, 42vw)",
+            "transform": "translate(48%, 68vw)",
             "transition": "ease, transform 1.5s"
         })
 

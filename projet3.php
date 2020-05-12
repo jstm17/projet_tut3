@@ -8,10 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="projet.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
-    <script src="projet.js"></script>
+    <script src="projet2.js"></script>
 </head>
 <body id="body">
+<?php
+$link = new PDO("mysql:host=localhost;dbname=mmitineraire", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+// header("Content-type:image/jpg");
 
+$sql = "SELECT formation.nom, formation.matieres_travaillees, formation.debouches, formation.URL, etablissement.nom, localisation.ville, localisation.code_postal, GROUP_CONCAT(localisation.ville,' - ',localisation.code_postal SEPARATOR ', ') AS lieu FROM formation, domaine, propose, heberge, se_situe, etablissement, localisation WHERE domaine.voie='tech' AND domaine.id=propose.id_propose_domaine AND formation.id=propose.id_propose_formation AND formation.type_de_formation='ecole' AND formation.id=heberge.id_heberge_formation AND id_heberge_etablissement =etablissement.id AND formation.id=id_se_situe_formation AND id_se_situe_localisation=localisation.id GROUP BY formation.nom";
+// On prépare la requête avant l"envoi :
+$req = $link -> prepare($sql);
+$req -> execute();
+echo'
     <!-- rer 0 -->
     <div class="rer0">
     
@@ -27,18 +35,18 @@
         <img class="railrouge" src="railrouge.png" alt="">
        
         <img class="railbleu" src="railbleu.png" alt="">
-        <button  class="bouton1">COM'</button>
-        <button  class="bouton2">TECH'</button>
+        <button  class="bouton1">COM\'</button>
+        <button  class="bouton2">TECH\'</button>
   
     <!-- Message présentation  -->
-        <!-- <div class="mmitinéraire">
+        <div class="mmitinéraire">
             <div class="présentation">
             <h2>MMItinéraire</h2>
-            <p>Le DUT MMI (Métiers du Multimédia et de l'Internet) est une formation pluridisciplinaire qui recouvre tous les champs du digital, de la réalisation de sites internet à l'animation de communautés, de la création vidéo à la conception de contenus, en passant par la communication ou encore le marketing. <br><br> Après l'obtention de son diplôme, l'étudiant.e peut poursuivre ses études et c'est là que MMItinéraire intervient ! <br> Construis ton chemin en choisissant les voies qui te plaisent le plus pour trouver la formation post-MMI qui est faite pour toi !</p>
+            <p>Le DUT MMI (Métiers du Multimédia et de l\'Internet) est une formation pluridisciplinaire qui recouvre tous les champs du digital, de la réalisation de sites internet à l\'animation de communautés, de la création vidéo à la conception de contenus, en passant par la communication ou encore le marketing. <br><br> Après l\'obtention de son diplôme, l\'étudiant.e peut poursuivre ses études et c\'est là que MMItinéraire intervient ! <br> Construis ton chemin en choisissant les voies qui te plaisent le plus pour trouver la formation post-MMI qui est faite pour toi !</p>
             <p class="capté">En route !</p>
             
         </div><div class="noir"></div>
-        </div> -->
+        </div>
 
     <!-- rer1 -->
     </div>
@@ -168,40 +176,56 @@
         </div>
     </div>
     </div>
-    <div class="rer4licence">
-        <div  style="position: relative;">
-        <button class="retour4licence">Retour</button>
-        <div  class="rails" style="position: relative">
-            <img src="railbleulicence3.png" class="railbleulicence" alt="">
-        </div>
-    </div>
+    
 
-    <div class="billetlicence">
-        <h2 class="licencenom">Applications Web - Applications Mobiles et Internet des Objets</h2>
-        <p class="matieres"><span class="titrematiere">Matières étudiées :</span> <br>Communication, Mise à niveau : bases algorithmiques, technologies audiovisuelles numériques, Gestion et administration des médias, Architectures informatiques et systèmes de stockage, Installation et administration des systèmes, Base de données, Contrôle qualité, Diffusion et distribution des médias, Réseaux</p>
-        <p class="debouches"><span class="titrematiere">Débouchés :</span> <br>Responsable d'exploitation des équipements informatiques de production et de diffusion, Responsable de l'administration et de la maintenance des réseaux informatiques pour l'audiovisuel numérique, Responsable qualité d'une régie de production, Opérateur trafic/chef de car/chef d'équipement, Assistant chef de projet d'ingénierie</p>
-        <p class="formation"><span class="titrematiere">Mode de formation</span> : Alternance</p>
-        <div class="rond1"><div class="rond1bis"></div></div>
-        <div class="rond2"></div>
-        <div class="zip"></div>
-        <a class="url" href="" target="_blank">En savoir plus</a>
-        <img class="logobillet" src="logommi/logo.png" alt=""> 
-        <div class="bandeblanche"></div>
-        <img class="code" src="code.png" alt="">
-    </div>
-</div>
-    <div class="rer4ecole">
+<div class="rer4ecole">
         <div  style="position: relative;">
         <button class="retour4ecole">Retour</button>
         <div  class="rails" style="position: relative">
             <img src="railvert.png" class="railvert" alt="">
         </div>
-    </div>
+    </div>';
 
-    <div class="billetecole">
-        <h2 class="licencenom">Applications Web - Applications Mobiles et Internet des Objets</h2>
-        <p class="matieres"><span class="titrematiere">Matières étudiées :</span> <br>Communication, Mise à niveau : bases algorithmiques, technologies audiovisuelles numériques, Gestion et administration des médias, Architectures informatiques et systèmes de stockage, Installation et administration des systèmes, Base de données, Contrôle qualité, Diffusion et distribution des médias, Réseaux</p>
-        <p class="debouches"><span class="titrematiere">Débouchés :</span> <br>Responsable d'exploitation des équipements informatiques de production et de diffusion, Responsable de l'administration et de la maintenance des réseaux informatiques pour l'audiovisuel numérique, Responsable qualité d'une régie de production, Opérateur trafic/chef de car/chef d'équipement, Assistant chef de projet d'ingénierie</p>
+    echo "<ul>";
+while($data = $req -> fetch()){
+
+// echo"<li>".$data["nom"]."</li>";
+// echo"<li>".$data["matieres_travaillees"]."</li>";
+// echo"<li>".$data["nom"]."</li>";
+echo '<div class="billetecole">
+    <h2 class="licencenom">'.$data["nom"].'</h2>
+    <p class="matieres2"><span class="titrematiere">Matières étudiées :</span> <br>'.$data["matieres_travaillees"].'</p>
+    <p class="debouches2"><span class="titrematiere">Débouchés :</span> <br>'.$data["debouches"].'</p>
+    <p class="formation2"><span class="titrematiere">Mode de formation :</span> Alternance</p>
+    <div class="rond1"><div class="rond1bis"></div></div>
+    <div class="rond2"></div> 
+    <div class="zip"></div>
+    <p class="etablissement"><span class="titrematiere">Etablissement : </span><br> '.$data["nom"].'</p>
+    <p class="localisation"><span class="titrematiere">Localisation : </span><br>'.$data["lieu"].'</p>
+    <a class="url" href='.$data["URL"].' target="_blank">En savoir plus</a>
+    <img class="logobillet" src="logommi/logo.png" alt=""> 
+    <div class="bandeblanche"></div>
+    <img class="code" src="code.png" alt="">
+</div> ';
+
+}
+$req = null;
+echo "</ul>";
+
+echo'<div class="rer4licence">
+        <div  style="position: relative;">
+        <button class="retour4licence">Retour</button>
+        <div  class="rails" style="position: relative">
+            <img src="railbleulicence3.png" class="railbleulicence" alt="">
+        </div>
+    </div>';
+    echo "<ul>";
+while($data = $req -> fetch()){
+   
+   echo' <div class="billetlicence">
+        <h2 class="licencenom">'.$data["nom"].'</h2>
+        <p class="matieres"><span class="titrematiere">Matières étudiées :</span> <br>'.$data["matieres_travaillees"].'</p>
+        <p class="debouches"><span class="titrematiere">Débouchés :</span> <br>'.$data["debouches"].'</p>
         <p class="formation"><span class="titrematiere">Mode de formation</span> : Alternance</p>
         <div class="rond1"><div class="rond1bis"></div></div>
         <div class="rond2"></div>
@@ -211,8 +235,13 @@
         <div class="bandeblanche"></div>
         <img class="code" src="code.png" alt="">
     </div>
+</div>';
     
-    </div>
+}
+$req = null;
+echo "</ul>";
     
+   '</div> </div>';
+    ?>
 </body>
 </html>

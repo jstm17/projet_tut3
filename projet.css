@@ -842,7 +842,7 @@ width: 20%;
     top: 2vw;
 }
 .rer4ecole{
-    transform: translate(107%, 54vw) ;
+    transform: translate(107%, 40vw) ;
     /* transform: translateY(64vw); */
     z-index: 50;
 }
@@ -902,7 +902,7 @@ box-shadow: 0.2vw 0.2vw 0.6vw #a3a3a3;
     width: 85.5%;
     text-transform: uppercase;
 }
-.matieres,.matieres2,.debouches,.debouches2,.url,.formation,.etablissement,.localisation{
+.matieres,.matieres2,.debouches,.debouches2,.url,.formation,.etablissement,.localisation,.formation2{
     /* position: absolute; */
     border-top: solid 1px;
     border-bottom: solid 1px;
@@ -922,12 +922,10 @@ box-shadow: 0.2vw 0.2vw 0.6vw #a3a3a3;
 .debouches{
     top: 13vw;
 }
-.matieres2{
-    margin-top: 3vw;
+.matieres2,.debouches2,.formation2{
+    margin-top: 1.5vw;
 }
-.debouches2{
-    margin-top: 3vw;
-}
+
 .titrematiere{
     color: black;
     font-size: 1.25vw;
@@ -954,11 +952,14 @@ box-shadow: 0.2vw 0.2vw 0.6vw #a3a3a3;
     top:4.6vw;
     margin-top:1vw;
 }
+.localisation{
+    margin-top: -1vw;
+}
 .etablissement{
-    top: 10vw;
+    top: 5vw;
 }
 .localisation{
-    top: 15vw;
+    top: 14vw;
 }
 .rond1,.rond2{
     height: 2vw;
@@ -1024,10 +1025,21 @@ ul{
     margin: 0;
 }
 .rer4licence{
-    transform: translate(133%);
+    transform: translate(138%);
 }
-.railbleulicence{
+/* .railbleulicence{
     width: 78.5%;
     left: -10%;
     top: -3vw;
+} */
+.railbleulicence{
+    width: 31.2%;
+    left: -22%;
+    top: 9.8vw;
+}
+.billetlicence{
+    top: 20vw;
+}
+.retour4licence{
+    top: 13vw;
 }
