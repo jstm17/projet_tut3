@@ -11,11 +11,7 @@
     <script src="projet2.js"></script>
 </head>
 <body id="body">
-<?php
-$link = new PDO("mysql:host=localhost;dbname=mmitineraire", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-// header("Content-type:image/jpg");
 
-echo'
     <!-- rer 0 -->
     <div class="rer0">
     
@@ -31,8 +27,8 @@ echo'
         <img class="railrouge" src="railrouge.png" alt="">
        
         <img class="railbleu" src="railbleu.png" alt="">
-        <button  class="bouton1">COM\'</button>
-        <button  class="bouton2">TECH\'</button>
+        <button  class="bouton1">COM'</button>
+        <button  class="bouton2">TECH'</button>
   
     <!-- Message présentation  -->
         <!-- <div class="mmitinéraire">
@@ -145,14 +141,17 @@ echo'
     <a href="" class="cv2yasmine">CV interactif</a>
     </div>
     
-    <form style="position: relative;" class="rerformulaire">
+    <?php
+$link = new PDO('mysql:host=localhost;dbname=mmitineraire', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+?>
+    <form action="projet3.php" method="post" style="position: relative;" class="rerformulaire">
         <p class="accueil">Accueil</p>
         <p class="contactez">Contactez nous !</p>
         <img class="logoformulaire" src="logommi/logo.png" alt="">
-        <input type="text" name="" id="nom" class="formulairenom" required placeholder="NOM Prénom">
-        <input type="email" name="" id="email" class="formulairenom formulaireemail" required placeholder="Email">
-        <input type="text" name="" id="objet" class="formulairenom formulaireobjet" required placeholder="Objet">
-        <textarea name="" id="" cols="50" rows="50" class="formulairenom formulairecom" required placeholder="Commentaire"></textarea>
+        <input type="text" name="nom" id="nom" class="formulairenom" required placeholder="NOM Prénom">
+        <input type="email" name="email" id="email" class="formulairenom formulaireemail" required placeholder="Email">
+        <input type="text" name="objet" id="objet" class="formulairenom formulaireobjet" required placeholder="Objet">
+        <textarea name="commentaire" id="" cols="50" rows="50" class="formulairenom formulairecom" required placeholder="Commentaire"></textarea>
         <button type="submit" class="envoyer">Envoyer !</button>
     </form>
 
@@ -171,15 +170,18 @@ echo'
             <img src="rail2222.png" class="railrougelicence" alt="">
         </div>
     </div>
-    </div>';
+    </div>
     
-//     <div class="rer4licence">
-//     <div  style="position: relative;">
-//     <button class="retour4licence">Retour</button>
-//     <div  class="rails" style="position: relative">
-//         <img src="railbleulicence3.png" class="railbleulicence" alt="">
-//     </div>
-// </div>
+    <div class="rer4licence">
+     <div  style="position: relative;">
+     <button class="retour4licence">Retour</button>
+     <div  class="rails" style="position: relative">
+         <img src="railbleulicence3.png" class="railbleulicence" alt="">
+     </div>
+ </div>
+<?php
+$link = new PDO("mysql:host=localhost;dbname=mmitineraire", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+// header("Content-type:image/jpg");
 
 // $sql3 = "SELECT formation.nom, formation.matieres_travaillees, formation.debouches, formation.URL FROM formation, domaine, propose WHERE domaine.voie='tech' AND domaine.id=propose.id_propose_domaine AND formation.id=propose.id_propose_formation AND formation.type_de_formation='licence pro'";
 // // On prépare la requête avant l"envoi :

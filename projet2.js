@@ -165,11 +165,11 @@ $(document).ready(function(){
 
     });
 
-    $(".réseaux,.algo,.base,.intégration,.sound").click(function(){
-        $(".billetecole").hide();
-        // On affiche les billets correspondant au filtre
-        $(".billet-".$(this).attr("id")).show()
-        });
+    // $(".réseaux,.algo,.base,.intégration,.sound").click(function(){
+    //     $(".billetecole").hide();
+    //     // On affiche les billets correspondant au filtre
+    //     $(".billet-".$(this).attr("id")).show()
+    //     });
         
     $(".algo").hover(function(){
         $(this).removeClass("domaine2")
