@@ -1,6 +1,6 @@
 <?php
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $db = new PDO('mysql:host=localhost;dbname=mmitineraire', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $link = new PDO('mysql:host=sqletud.u-pem.fr;dbname=jsaint02_db', 'jsaint02', 'mmitineraire', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 $sql = "INSERT INTO formulaire_de_contact (nom, email, objet, commentaire) VALUES (:nom, :email, :objet, :commentaire)";
 
@@ -11,13 +11,14 @@ $sql = "INSERT INTO formulaire_de_contact (nom, email, objet, commentaire) VALUE
       'commentaire' => $_POST['commentaire']
     );
 
-    $stmt = $db->prepare($sql);
+    $stmt = $link->prepare($sql);
 
     $stmt->execute($attributes);
 
-    $db = null;
+    $link = null;
 
-    header('Location: projet2.php');
+    header('Location: index.php?success=true');
+
   } else {
     http_response_code(500);
   }

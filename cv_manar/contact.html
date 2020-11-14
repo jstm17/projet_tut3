@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
+    <title>CV Manar Bassimane</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 248, 205);
+            overflow: hidden;
+            cursor: default;
+
+        }
+
+        h1 {
+            font-family: 'Bellota', cursive;
+            color: #632525;
+            font-size: 3em;
+            text-align: center;
+            box-shadow: 3px 3px 2px 2px rgb(100, 52, 52);
+            width: 225px;
+            margin: auto;
+            border-radius: 10px;
+
+        }
+
+        input[type=submit] {
+            display: block;
+            text-decoration: none;
+            border: 1px solid rgb(255, 255, 255);
+            background: linear-gradient(#ffc9e8 0%,
+                    #ffd9f6 24%,
+                    #f3a5a5 41%,
+                    #f1b6b6 100%);
+            width: 100px;
+
+            transition: ease, transform 0.2s;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+
+        }
+
+        input[type=submit]:hover {
+            border: none;
+            transform: scale(1.1);
+            transition: ease, transform 0.2s;
+        }
+
+        input,
+        textarea {
+            font-family: 'Bellota', cursive;
+            font-size: 100%;
+            margin-top: 2%;
+            width: 250px;
+            border-radius: 10px;
+            border: none;
+            border: 1px groove rgb(214, 133, 133);
+
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            background-color: rgb(255, 248, 184);
+        }
+
+        input {
+            height: 37px;
+        }
+
+
+        form {
+            width: 250px;
+            margin: auto;
+
+
+        }
+
+        div {
+            position: relative;
+            top: 100px;
+        }
+
+        .fleur4 {
+            max-width: 500px;
+            height: auto;
+            position: absolute;
+            right: -140px;
+            top: -90px;
+            display: block;
+
+        }
+
+        .fleur5 {
+            max-width: 325px;
+            height: auto;
+            position: absolute;
+            left: -160px;
+            top: -90px;
+            display: block;
+            z-index: 1;
+            ;
+        }
+
+
+
+        .fleur6 {
+            max-width: 225px;
+            height: auto;
+            position: absolute;
+            left: -100px;
+            top: 60px;
+            display: block;
+        }
+
+        .fleur7 {
+            max-width: 485px;
+            height: auto;
+            position: absolute;
+            right: -100px;
+            top: -300px;
+            display: block;
+            z-index: -1;
+        }
+
+
+        .fleur8 {
+            max-width: 425px;
+            height: auto;
+            position: absolute;
+            left: -80px;
+            top: -250px;
+            display: block;
+        }
+
+        .fleur9 {
+            max-width: 300px;
+            height: auto;
+            position: absolute;
+            right: -180px;
+            top: 150px;
+            display: block;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <h1>Contact</h1>
+        <br>
+
+        <form action="cvinteractif.php" method="post">
+
+            <input type="text" placeholder="NOM Prénom" name="nom" id="name" required>
+            <input type="mail" placeholder="Email" name="email" id="email" required>
+            <input type="text" placeholder="Objet" name="objet" id="objet">
+            <textarea rows="8" cols="30" placeholder="Dis-moi tout" name="commentaire" id="commentaire"
+                required></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+
+    <img class="fleur5" src="droite/3.png" alt="">
+    <img class="fleur4" src="droite/3.png" alt="">
+    <img class="fleur6" src="droite/6.png" alt="">
+    <img class="fleur7" src="droite/7.png" alt="">
+    <img class="fleur8" src="droite/5.png" alt="">
+    <img class="fleur9" src="droite/2.png" alt="">
+
+</body>
+
+</html>

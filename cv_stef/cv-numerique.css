@@ -1,0 +1,342 @@
+*{
+    overflow-x: unset;
+}
+
+html {
+  
+  font-family:Arial, Helvetica, sans-serif;
+  color: aliceblue;
+}
+body {
+  background-color: rgb(25, 88, 148);
+  font-family:Arial, Helvetica, sans-serif;
+  color: aliceblue;
+  margin-left: 15vh;
+  margin-right: 15vh;
+}
+
+
+
+h1{
+  text-align: center;
+  font-family: 'Bowlby One', cursive;
+  font-weight: lighter;
+  font-size: 5vh;
+}
+
+header{
+  text-decoration:none;
+  /*background-color:rgb(13, 33, 255);*/
+  display: flex;
+  justify-content: space-between;
+  width: 100vh;
+  margin: auto;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+
+}
+
+header img:hover{
+  border-radius: top-right 50px;
+  background-position-x: right;
+  transform: scale(1.20);
+  transition: ease 1.05s;
+}
+
+.resume{
+  width: 50vh;
+}
+
+
+.data{
+  width: 50px;
+}
+
+
+
+
+
+/* LES TIMELINES*/
+
+/*timeline formation*/
+
+section { 
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 0.5em;
+    width: 90%;
+    margin-left: 8vh;
+   /* background-color: red;*/
+    /*height: 25vh*/
+}
+
+section .logos-formation{ /* les logos des formation (qui sont dans la balise*/
+   /*height: 410px; Ne plus réouvir*/
+   /*background-color: #fae700;*/
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;  
+}
+
+
+.logos-formation img{
+margin-bottom:5vh;
+}
+
+
+.logos-formation a { 
+    color:black;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    overflow: hidden; /*cache le texte au-delà des 50 pixels de haut*/
+    border: white 2px solid;
+    border-radius: 20%; /* pour arrondir les angles */
+    height: 10vh;
+    margin-bottom: 18vh;
+    background-color: rgb(219, 238, 240);
+    width: 90%;
+}
+
+.logos-formation a:hover {
+    background-color: rgb(171, 228, 230);
+    transition: ease 0.5s;
+    height: 50vh;
+    }
+
+
+
+
+/*timeline expérience*/
+
+
+section { 
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 1.10em;
+    width: 90%;
+   /* background-color: red;*/
+    /*height: 25vh*/
+}
+
+section .logos-xp{ /* les logos des formation (qui sont dans la balise*/
+   /*height: 410px; Ne plus réouvir*/
+   /*background-color: #fae700;*/
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;  /* Pour ne pas que l'image s'étire */
+}
+
+
+.logos-xp img{
+margin-bottom:5vh;
+}
+
+
+.logos-xp a { 
+    color:black;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+    overflow: hidden; /*cache le texte au-delà des 50 pixels de haut*/
+    border: white 2px solid;
+    border-radius: 5%; /* pour arrondir les angles */
+    height: 10vh;
+    margin-bottom: 18vh;
+    background-color: rgb(219, 238, 240);
+    width: 90%;
+}
+
+.logos-xp a:hover {
+    background-color: rgb(171, 228, 230);
+    transition: ease 0.5s;
+    height: 70vh;
+    }
+
+
+
+.logos-formation img:hover{
+    transition: ease 0.9s;
+    transform: scaleZ(1.2);
+}
+
+
+  
+  @-webkit-keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      -webkit-transform: translatey(0px);
+              transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      -webkit-transform: translatey(-20px);
+              transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      -webkit-transform: translatey(0px);
+              transform: translatey(0px);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      -webkit-transform: translatey(0px);
+              transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      -webkit-transform: translatey(-20px);
+              transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      -webkit-transform: translatey(0px);
+              transform: translatey(0px);
+    }
+  }
+  .section .logos-formation {
+    /*height: 70vh;*/
+    /*width: 70%;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+   /*background-color: #ffffff;*/
+  }
+  
+  .logos-formation img {
+    /*width: 500px;*/
+    padding: 10px;
+   /* border: 5px white solid;*/
+    /*box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);*/
+    animation: float 2s ease-in-out infinite;
+    /*width: 100%;*/
+  }
+  
+
+
+  .section .logos-xp {
+    /*height: 70vh;*/
+    /*width: 70%;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+   /*background-color: #ffffff;*/
+  }
+  
+  .logos-xp img {
+    /*width: 500px;*/
+    padding: 10px;
+    /*border: 5px white solid;*/
+    /*box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);*/
+    animation: float 2s ease-in-out infinite;
+    /*width: 100%;*/
+  }
+
+
+
+
+
+
+
+
+  /* "FOOTER */
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer img{
+  width: 10vh;
+}
+
+
+.language :hover{
+  
+  border-radius: top-right 50px;
+  background-position-x: right;
+  transform: scale(1.20);
+  transition: ease 1.05s;
+}
+
+
+.skills :hover{
+  
+  border-radius: top-right 50px;
+  background-position-x: right;
+  transform: scale(1.20);
+  transition: ease 1.05s;
+}
+
+
+.hobbies :hover{
+  
+  border-radius: top-right 50px;
+  background-position-x: right;
+  transform: scale(1.20);
+  transition: ease 1.05s;
+}
+
+
+
+audio{
+  display: none;
+}
+
+
+
+
+
+
+/* FORMULAIRE*/
+form{
+  margin-top: 10vh;
+}
+
+
+
+
+form{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 50vh;
+  height: 50vh;
+  border-radius: 5vh;
+  margin:auto
+ 
+
+}
+
+
+.titre-formulaire{
+  background-color: rgb(176, 223, 223);
+
+}
+
+#commentaire{
+  background-color:rgb(176, 223, 223);
+}
+/*
+  video{
+      background: url(video/network.mp4) no-repeat;
+      top: 0px;
+      left: 0px;
+      z-index: 0;
+  }
+*/
+ 
+
+
+ 
+  

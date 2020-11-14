@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
+  <title>CV Manar Bassimane</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffc48d;
+      overflow: hidden;
+
+    }
+
+    h1 {
+
+      font-family: 'Bellota', cursive;
+      color: white;
+    }
+
+    .exp {
+
+      float: left;
+      margin: auto;
+      width: 400px;
+      margin-top: 160px;
+      margin-left: 250px;
+      animation: slidein 2s;
+      -moz-webkit-o-animation: slidein 2s;
+    }
+
+    @keyframes slidein {
+      from {
+        margin-top: -30%;
+      }
+
+      to {
+        margin-top: 160px;
+      }
+    }
+
+
+    .frm {
+      margin: auto;
+      width: 400px;
+      margin-top: 160px;
+      margin-right: 250px;
+      animation: slidein1 2s;
+      -moz-webkit-o-animation: slidein1 2s;
+    }
+
+    @keyframes slidein1 {
+      from {
+        margin-top: 100%;
+
+      }
+
+      to {
+        margin-top: 160px;
+      }
+    }
+
+    .flex {
+      display: flex;
+    }
+
+
+    p {
+      font-family: 'Bellota', cursive;
+      color: rgb(172, 0, 29);
+    }
+
+    .fleur4 {
+      max-width: 450px;
+      height: auto;
+      position: absolute;
+      left: -240px;
+      top: 125px;
+    }
+
+    .fleur5 {
+      max-width: 450px;
+      height: auto;
+      position: absolute;
+      right: -250px;
+      top: 125px;
+    }
+
+    .button {
+      font-family: 'Bellota', cursive;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 2px 2px 2px rgb(206, 172, 127);
+      background: linear-gradient(#f8eabd 0%,
+          #fff2d9 24%,
+          #f0e8bd 41%,
+          #f8daa1 100%);
+      width: 60px;
+      height: 25px;
+      cursor: pointer;
+
+      transition: ease, transform 0.2s;
+    }
+
+    .button:focus {
+      outline: none;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      transition: ease, transform 0.2s;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="index.html"><input class="button" type="button" value="Accueil"></a>
+  <div class="flex">
+    <div class="exp" align="right">
+      <h1>EXP&EacuteRIENCE</h1>
+
+      <p><strong>GRAPHISTE • F&EacuteVRIER-JUIN 2020</strong>
+        <br>Agence étudiante MMItinéraire</p>
+      <p><strong>ADMINISTRATION/&EacuteV&EgraveNEMENTIEL• 2015-2019</strong>
+        <br>Animation kermesses et organisation au sein d'une association</p>
+      <p><strong>STAGE • D&EacuteCEMBRE 2014</strong>
+        <br>Pharmacie</p>
+    </div>
+
+    <div class="frm" align="left">
+      <h1>FORMATION</h1>
+      <p><strong>2019-2021• DUT MMI</strong><br>
+        Métiers du multimédia et de l'internet: Audiovisuel, Communication, Développement web</p>
+      <p><strong>2018-2019• LICENCE 1, LEA</strong><br>
+        Langues étrangères appliquées en anglais-espagnol</p>
+      <p><strong>2015-2018• LYC&EacuteE REN&Eacute DESCARTES</strong><br>
+        série scientifique</p>
+    </div>
+  </div>
+
+  <img class="fleur4" src="droite/4.png" alt="">
+  <img class="fleur5" src="droite/4.png" alt="">
+</body>
+
+</html>

@@ -1,0 +1,1898 @@
+body {
+    margin: 0;
+    top: 0px;
+    height: 100%;
+    padding: 0%;
+    background: #ffe9ce;
+    /* background-color: #1a1a1a; */
+
+}
+
+/* Personnalisation de la barre de scroll */
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 1vw;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffbc90;
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffa96f;
+}
+
+html {
+    height: 100%;
+    padding: 0%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Pop up titre */
+h2 {
+    font-family: 'Balsamiq Sans', cursive;
+    text-align: center;
+}
+
+/* CSS pop up */
+.présentation {
+    position: absolute;
+    background-color: #ffbc90;
+    z-index: 5;
+    width: 40%;
+    left: 29%;
+    top: 10vw;
+    box-shadow: 0px 1px 10px #666666;
+    border-radius: 2vw;
+    padding: 1%;
+    font-family: 'Balsamiq Sans', cursive;
+    text-align: center;
+    height: 21vw;
+    font-size: 1vw;
+}
+
+/* Bouton "En route!" */
+.capté {
+    position: absolute;
+    z-index: 5;
+    width: 20%;
+    left: 38%;
+    border: #ffe9ce 0.2vw solid;
+    border-radius: 100vw;
+    padding: 1.5%;
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    top: 16.5vw;
+    background-color: transparent;
+    font-size: 1.3vw;
+}
+
+/* Animation au survol du bouton */
+.capté:hover {
+    background-color: #ffe9ce;
+    cursor: pointer;
+}
+/* Animations du bouton capté qd on ne le survole plus */
+.captémouseout {
+    background-color: transparent;
+    transform: scale(1);
+    transition: ease, transform 0.2s;
+}
+/* page invisible */
+.invisible {
+    position: absolute;
+    background-color: transparent;
+    z-index: 4;
+    width: 100%;
+    height: 100vh;
+    top: 5vw;
+}
+
+/* CSS bouton cv, contact, aide et accueil */
+.cv,
+.aide,
+.accueil,
+.accueil2 {
+    z-index: 4;
+    padding: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.2vw;
+    border-radius: 100vw;
+    top: 1vw;
+    text-decoration: none;
+    position: absolute;
+    right: 15%;
+    background-color: #ff714b;
+    color: white;
+    box-shadow: 0px 1px 5px #a3a3a3;
+    cursor: pointer;
+}
+
+.contact {
+    z-index: 4;
+    padding: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.2vw;
+    border-radius: 100vw;
+    top: 1vw;
+    text-decoration: none;
+    position: absolute;
+    color: white;
+    box-shadow: 0px 1px 5px #a3a3a3;
+    cursor: pointer;
+    right: 5%;
+    background-color: #47a2ab;
+}
+
+/* Animations du bouton contact qd on le survole */
+.contact:hover {
+    background-color: #8ce9ad;
+}
+
+/* Animations du bouton cv qd on le survole */
+.cvhover {
+    background-color: #ffb92b;
+    transform: scale(1.1);
+    transition: ease, transform 0.2s;
+}
+
+/* Animations du bouton cv qd on ne le survole plus */
+.cvmouseout {
+    background-color: #ff714b;
+    transform: scale(1);
+    transition: ease, transform 0.2s;
+}
+
+/* Animations du bouton contact qd on ne le survole plus */
+.contactmouseout {
+    background-color: #47a2ab;
+    transform: scale(1);
+    transition: ease, transform 0.2s;
+}
+
+/* Page des CV */
+.rercv {
+    display: none;
+}
+
+/* image du train dans la page cv */
+.cvtrain {
+    width: 100%;
+    margin-top: 10vw;
+    position: fixed;
+}
+
+/* Nos nom + 2 boutons cv */
+.persojuliecv,
+.persomanarcv,
+.persostefcv,
+.persoyasminecv {
+    display: none;
+    position: absolute;
+    top: 33vw;
+    left: 5%;
+    height: 8vw;
+    width: 30%;
+}
+
+.persostefcv,
+.persoyasminecv {
+    left: 65%;
+}
+
+/* Phrase */
+.jetez {
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: bold;
+    font-size: 3vw;
+    position: absolute;
+    top: 2vw;
+    left: 34%;
+}
+
+/* Noms */
+.julie,
+.manar,
+.stef,
+.yasmine {
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1.5vw;
+}
+
+/* Boutons cv papier et cv intéractif */
+.cv1julie,
+.cv2julie,
+.cv1manar,
+.cv2manar,
+.cv1stef,
+.cv2stef,
+.cv1yasmine,
+.cv2yasmine {
+    position: absolute;
+    left: 8%;
+    margin-right: 5%;
+    padding: 2%;
+    width: 35%;
+    vertical-align: middle;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Balsamiq Sans', cursive;
+    border-radius: 100vw;
+    background-color: #ff714b;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 1px 5px #666666;
+}
+
+.cv2julie,
+.cv2manar,
+.cv2stef,
+.cv2yasmine {
+    left: 54%;
+    background-color: #47a2ab;
+}
+
+/* Animation des boutons cv papier qd on les survole */
+.cv1julie:hover,
+.cv1manar:hover,
+.cv1stef:hover,
+.cv1yasmine:hover {
+    background-color: #ffb92b;
+}
+
+/* Animation des boutons cv intéractif qd on les survole */
+.cv2julie:hover,
+.cv2manar:hover,
+.cv2stef:hover,
+.cv2yasmine:hover {
+    background-color: #8ce9ad;
+}
+
+/* Personnages */
+.persojulie,
+.persomanar,
+.persostef,
+.persoyasmine {
+    position: absolute;
+    width: 13%;
+    height: 16vw;
+    z-index: 100;
+    top: 13.75vw;
+    left: 7%;
+    cursor: pointer;
+}
+
+.persojulie {
+    background: url(images/julie.png) no-repeat center/100%;
+}
+
+.persomanar {
+    background: url(images/manar.png) no-repeat center/100%;
+    left: 26%;
+}
+
+.persostef {
+    background: url(images/stefi.png) no-repeat center/100%;
+    left: 66%;
+    top: 13.8vw;
+}
+
+.persoyasmine {
+    background: url(images/yasmine.png) no-repeat center/100%;
+    left: 85%;
+}
+
+/* Animations des personnages qd on les survole et quand on ne les survole plus*/
+@keyframes persojuliehover {
+    0% {
+        background: url(images/julie.png) no-repeat center/100%;
+
+    }
+
+    100% {
+        background: url(images/julie2.png) no-repeat center/100%;
+    }
+}
+
+.persojuliehover {
+    animation: persojuliehover ease 0.2s forwards;
+}
+
+@keyframes persojuliemouseout {
+    0% {
+        background: url(images/julie2.png) no-repeat center/100%;
+    }
+
+    100% {
+        background: url(images/julie.png) no-repeat center/100%;
+    }
+
+}
+
+.persojuliemouseout {
+    animation: persojuliemouseout ease 0.2s forwards;
+}
+
+@keyframes persomanarhover {
+    0% {
+        background: url(images/manar.png) no-repeat center/100%;
+
+    }
+
+    100% {
+        background: url(images/manar2.png) no-repeat center/100%;
+    }
+}
+
+.persomanarhover {
+    animation: persomanarhover ease 0.2s forwards;
+}
+
+@keyframes persomanarmouseout {
+    0% {
+        background: url(images/manar2.png) no-repeat center/100%;
+    }
+
+    100% {
+        background: url(images/manar.png) no-repeat center/100%;
+    }
+
+}
+
+.persomanarmouseout {
+    animation: persomanarmouseout ease 0.2s forwards;
+}
+
+@keyframes persostefhover {
+    0% {
+        background: url(images/stefi.png) no-repeat center/100%;
+
+    }
+
+    100% {
+        background: url(images/stefi2.png) no-repeat center/100%;
+    }
+}
+
+.persostefhover {
+    animation: persostefhover ease 0.2s forwards;
+}
+
+@keyframes persostefmouseout {
+    0% {
+        background: url(images/stefi2.png) no-repeat center/100%;
+    }
+
+    100% {
+        background: url(images/stefi.png) no-repeat center/100%;
+    }
+
+}
+
+.persostefmouseout {
+    animation: persostefmouseout ease 0.2s forwards;
+}
+
+@keyframes persoyasminehover {
+    0% {
+        background: url(images/yasmine.png) no-repeat center/100%;
+
+    }
+
+    100% {
+        background: url(images/yasmine2.png) no-repeat center/100%;
+    }
+}
+
+.persoyasminehover {
+    animation: persoyasminehover ease 0.2s forwards;
+}
+
+@keyframes persoyasminemouseout {
+    0% {
+        background: url(images/yasmine2.png) no-repeat center/100%;
+    }
+
+    100% {
+        background: url(images/yasmine.png) no-repeat center/100%;
+    }
+
+}
+
+.persoyasminemouseout {
+    animation: persoyasminemouseout ease 0.2s forwards;
+}
+
+/* Bouton aide */
+.aide {
+    border: #ffab66 3px solid;
+    color: #ffab66;
+    right: 93%;
+    padding: 0.5%;
+    width: 2vw;
+    height: 2vw;
+    text-align: center;
+    background-color: transparent;
+    font-size: 2vw;
+    top: 0vw;
+    text-shadow: 0px 1px 5px #a3a3a3;
+}
+
+/* Logo MMItinéraire */
+.logo {
+    position: absolute;
+    top: 2vw;
+    left: 40%;
+    width: 20%;
+}
+
+/* Rail rouge */
+.railrouge {
+    position: absolute;
+    width: 55%;
+    top: 7.5vw;
+    -webkit-filter: drop-shadow(-5px 5px 5px #666666);
+    filter: drop-shadow(-5px 5px 5px #666666);
+    z-index: 2;
+
+}
+
+/* Rail bleu */
+.railbleu {
+    position: absolute;
+    width: 55%;
+    min-width: 50%;
+    -webkit-filter: drop-shadow(5px 5px 5px #666666);
+    filter: drop-shadow(5px 5px 5px #666666);
+    float: right;
+    z-index: 2;
+    left: 45%;
+    top: 7.5vw;
+}
+
+/* Animation des rails qd on les survole */
+.railhover {
+    -webkit-filter: saturate(200%) drop-shadow(5px 5px 5px #666666);
+    filter: saturate(200%) drop-shadow(5px 5px 5px #666666);
+    transform: scale(1.03);
+    transition: ease, transform 1s;
+    z-index: 4;
+}
+
+/* Animation des rails qd on ne les survole plus*/
+.railmouseout {
+    -webkit-filter: saturate(100%) drop-shadow(5px 5px 5px #666666);
+    filter: saturate(100%) drop-shadow(5px 5px 5px #666666);
+    transform: scale(1);
+    transition: ease, transform 1s;
+    z-index: 2;
+}
+
+/* Animation des rails au clic des boutons */
+.railclick {
+    -webkit-filter: saturate(200%) drop-shadow(5px 5px 5px #666666);
+    filter: saturate(200%) drop-shadow(5px 5px 5px #666666);
+    transform: scale(1);
+    transition: ease, transform 0.5s;
+    z-index: 4;
+}
+
+/* Animation qui rend les rails de couleur saturée */
+.railsaturate {
+    -webkit-filter: saturate(200%) drop-shadow(5px 5px 5px #666666);
+    filter: saturate(200%) drop-shadow(5px 5px 5px #666666);
+    z-index: 4;
+}
+
+/* Animation qui enlève l'ombre des rails */
+.railombre {
+    -webkit-filter: saturate(200%);
+    filter: saturate(200%);
+    z-index: 4;
+}
+
+/* Bouton "com" et "tech" */
+.bouton1,
+.bouton2 {
+    position: absolute;
+    left: 15%;
+    top: 21.3vw;
+    width: 12%;
+    padding: 0.4%;
+    border-radius: 100px;
+    display: block;
+    font-size: 1.6vw;
+    border: solid #ffb92b 0.1vw;
+    z-index: 4;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.2vw;
+    font-family: 'Balsamiq Sans', cursive;
+    ;
+    background-color: #ffaa3200;
+    cursor: pointer;
+}
+
+/* Animation du bouton "com" qd on le survole */
+.bouton1:hover {
+    background-color: #ffb92b;
+}
+
+/* Bouton "tech" */
+.bouton2 {
+    left: 72%;
+    top: 22vw;
+    width: 12%;
+    border: solid #8ce9ad 0.1vw;
+
+}
+
+/* Animation du bouton "tech" qd on le survole */
+.bouton2:hover {
+    background-color: #8ce9ad;
+}
+
+/* Animation des boutons qd on survole les rails */
+.boutonhover {
+    transform: translate(0px, -5px);
+    transition: ease, transform 1s;
+}
+
+/* Animation des boutons qd on les survole */
+.boutonhover2 {
+    transform: translate(0px, -5px) scale(1.1);
+    transition: ease, transform 0.3s;
+}
+
+/* Animation du bouton licences "com" qd on survole le rail licences */
+.boutonhover3 {
+    transform: translate(-9px, -3px);
+    transition: ease, transform 1s;
+}
+
+/* Animation du bouton licences "com" qd on le survole */
+.boutonhover4 {
+    transform: translate(-9px, -3px) scale(1.1);
+    transition: ease, transform 0.3s;
+}
+
+/* Animation du bouton licences "tech" qd on survole le rail licences */
+.boutonhover5 {
+    transform: translate(9px, -3px);
+    transition: ease, transform 1s;
+}
+
+/* Animation du bouton licences "tech" qd on le survole */
+.boutonhover6 {
+    transform: translate(9px, -3px) scale(1.1);
+    transition: ease, transform 0.3s;
+}
+
+/* Animation des boutons qd on ne les survole plus */
+.boutonmouseout {
+    transform: translate(0px, 0px);
+    transition: ease, transform 1s;
+}
+
+/* Page accueil */
+.rer0 {
+    z-index: 6;
+}
+
+/* Page n°1 à gauche */
+.rer1 {
+    transform: translate(-115%);
+    z-index: 10;
+}
+
+/* Boutons retour */
+.retour1,
+.retour2,
+.retour3,
+.retour4,
+.retour3ecole,
+.retour3licence,
+.retour4ecole,
+.retour4licence,.liste_déroulante_tech,.liste_déroulante_com, .remonter_lic_tech,.remonter_eco_tech,.remonter_lic_com,.remonter_eco_com {
+    z-index: 14;
+    position: absolute;
+    cursor: pointer;
+    left: 105%;
+    padding: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.2vw;
+    vertical-align: middle;
+    border-radius: 100vw;
+    top: 1vw;
+    background-color: #ff4f11;
+    color: white;
+    box-shadow: 0px 1px 5px #a3a3a3;
+    border: none;
+}
+
+/* Animation des boutons com qd on les survole*/
+.retour1:hover,
+.retour3:hover,
+.retour3ecole:hover,
+.retour3licence:hover,.remonter_lic_com:hover,.remonter_eco_com:hover {
+    background-color: #ffb800;
+}
+
+/* Bouton com école */
+.retour3ecole,
+.retour3licence {
+    min-width: 6vw;
+}
+
+/* Page n°1 à droite */
+.rer2 {
+    transform: translate(100%);
+    z-index: 1;
+}
+
+/* Ajout de la couleur bleu pour les boutons tech */
+.retour2,
+.retour4,.remonter_lic_tech,.remonter_eco_tech {
+    left: 4%;
+    background-color: #08bebe;
+}
+
+/* Animation des boutons tech qd on les survole*/
+.retour2:hover,
+.retour4:hover,.remonter_lic_tech:hover,.remonter_eco_tech:hover {
+    background-color: #8ce9ad;
+}
+
+/* Bouton retour tech */
+.retour3 {
+    left: 100%;
+}
+
+/* Rail rouge n°2 */
+.railrouge2 {
+    width: 115%;
+    min-width: 50%;
+    -webkit-filter: saturate(100%) drop-shadow(-5px 5px 5px #666666);
+    filter: saturate(100%) drop-shadow(-5px 5px 5px #666666);
+    float: right;
+    z-index: 0;
+    position: absolute;
+}
+
+/* Rail bleu n°2 */
+.railbleu2 {
+    width: 107%;
+    min-width: 50%;
+    -webkit-filter: saturate(100%) drop-shadow(5px 5px 5px #666666);
+    filter: saturate(100%) drop-shadow(5px 5px 5px #666666);
+    float: right;
+    z-index: 1;
+
+    position: absolute;
+}
+
+/* Points noirs rail bleu 2 */
+.pointnb,
+.pointn2b,
+.pointn3b,
+.pointn4b,
+.pointn5b {
+    position: absolute;
+    top: 27.8vw;
+    left: 5%;
+    padding: 1.2%;
+    background-color: rgb(233, 233, 233);
+    z-index: 15;
+    border: black solid 0.4vw;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.pointn2b {
+    top: 28vw;
+    left: 30%;
+}
+
+.pointn3b {
+    top: 28vw;
+    left: 50%;
+}
+
+.pointn4b {
+    top: 28vw;
+    left: 63%;
+}
+
+.pointn5b {
+    top: 28vw;
+    left: 82%;
+}
+
+/* Points blancs rail bleu 2 */
+.pointb1b,
+.pointb2b,
+.pointb3b,
+.pointb4b,
+.pointb5b {
+    top: 28.5vw;
+    left: 14%;
+    padding: 1.2%;
+    background-color: rgb(233, 233, 233);
+    z-index: 15;
+    border-radius: 100px;
+    position: absolute;
+}
+
+.pointb2b {
+    top: 28.5vw;
+    left: 22%;
+}
+
+.pointb3b {
+    top: 28.5vw;
+    left: 40%;
+    padding: 1.2%;
+}
+
+.pointb4b {
+    top: 28.5vw;
+    left: 73%;
+    padding: 1.2%;
+}
+
+.pointb5b {
+    top: 28.5vw;
+    left: 92%;
+    padding: 1.2%;
+}
+
+/* Points noirs rail rouge 2 */
+.pointnr,
+.pointn2r,
+.pointn3r,
+.pointn4r,
+.pointn5r,
+.pointn6r {
+    top: 29vw;
+    left: 18%;
+    padding: 1.2%;
+    background-color: rgb(233, 233, 233);
+    z-index: 20;
+    border: black solid 0.4vw;
+    border-radius: 100px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.pointn2r {
+    top: 29vw;
+    left: 30%;
+}
+
+.pointn3r {
+    top: 29vw;
+    left: 45%;
+}
+
+.pointn4r {
+    top: 29vw;
+    left: 60%;
+}
+
+.pointn5r {
+    top: 29vw;
+    left: 70%;
+}
+
+.pointn6r {
+    top: 21.5vw;
+    left: 86%;
+}
+
+/* Points blancs rail rouge 2 */
+.pointb1r,
+.pointb2r,
+.pointb3r,
+.pointb4r,
+.pointb5r,
+.pointb6r {
+    top: 29.4vw;
+    left: 23.8%;
+    padding: 1.2%;
+    background-color: rgb(233, 233, 233);
+    z-index: 15;
+    border-radius: 100px;
+    position: absolute;
+}
+
+.pointb2r {
+    top: 29.4vw;
+    left: 38%;
+    padding: 1.2%;
+    background-color: rgb(233, 233, 233);
+    z-index: 15;
+    border-radius: 100px;
+    position: absolute;
+}
+
+.pointb3r {
+    top: 29.4vw;
+    left: 53%;
+}
+
+.pointb4r {
+    top: 27.2vw;
+    left: 79%;
+}
+
+.pointb5r {
+    top: 14.8vw;
+    left: 95%;
+}
+
+.pointb6r {
+    top: 12.7vw;
+    left: 105%;
+}
+
+/* Animation des points noirs qd on les survole */
+.pointhover {
+    background-color: white;
+    box-shadow: 0px 0px 15px 5px white;
+}
+
+/* Nom des domaines */
+.domaine {
+    -webkit-filter: drop-shadow(2px 3px 2px #000000b6);
+    filter: drop-shadow(2px 3px 2px #000000b6);
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 2vw;
+    /* transform: rotate(-70deg); */
+    z-index: 18;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Domaines tech */
+.réseaux {
+    left: 3%;
+    top: 16vw;
+    position: absolute;
+}
+
+.intégration {
+    left: 60%;
+    top: 12vw;
+}
+
+.base {
+    left: 45%;
+    top: 12vw;
+}
+
+.algo {
+    left: 25%;
+    top: 10vw;
+}
+
+.sound {
+    left: 78%;
+    top: 13vw;
+}
+
+
+/* Domaines com */
+.marketing {
+    left: 15.5%;
+    top: 16vw;
+}
+
+.gestion {
+    left: 27.5%;
+    top: 15vw;
+}
+
+.communication {
+    left: 41%;
+    top: 14vw;
+}
+
+.audiovisuel {
+    left: 57%;
+    top: 15vw;
+}
+
+.infographie {
+    left: 67%;
+    top: 15vw;
+}
+
+.graphisme {
+    left: 83.5%;
+    top: 7vw;
+}
+
+/* Animation des domaines tech qd on les survole */
+.domainehover {
+    transform: rotate(-70deg) scale(1.1);
+    transition: ease, transform 0.2s;
+    text-decoration: underline cyan;
+}
+
+/* Animation des domaines com qd on les survole */
+.domainehover2 {
+    transform: rotate(-70deg) scale(1.1);
+    transition: ease, transform 0.2s;
+    text-decoration: underline darkorange;
+}
+
+/* Animation des domaines qd on ne les survole plus */
+.domaine2 {
+    transform: rotate(-70deg);
+}
+
+/* Page n°3 à droite */
+.rer3 {
+    transform: translate(-125%);
+}
+
+/* Page n°3 à gauche */
+.rer4 {
+    transform: translate(107%);
+    z-index: 1;
+}
+
+/* Rail rouge écoles */
+.railrouge3bas {
+    position: absolute;
+    width: 62.5%;
+    min-width: 50%;
+    float: right;
+    left: 48%;
+    top: 26.2vw;
+
+}
+
+/* Rail rouge licences pro */
+.railrouge3haut {
+    position: absolute;
+    width: 111%;
+    min-width: 50%;
+    float: right;
+    top: 3.4vw;
+}
+
+/* Rail bleu écoles */
+.railbleu3bas {
+    width: 62%;
+    min-width: 50%;
+    float: right;
+    top: 24.2vw;
+    position: absolute;
+}
+
+/* Rail bleu licences pro */
+.railbleu3haut {
+    width: 125%;
+    min-width: 50%;
+    float: right;
+    top: 4.7vw;
+    position: absolute;
+}
+
+/* Boutons écoles et licences */
+.bouton3,
+.bouton4,
+.bouton5,
+.bouton6 {
+    position: absolute;
+    left: 20%;
+    top: 17.6vw;
+    width: 19%;
+    padding: 0.4%;
+    border-radius: 100px;
+    display: block;
+    font-size: 1.6vw;
+    border: solid #ffb92b 0.1vw;
+    z-index: 14;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.2vw;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: #ffaa3200;
+    cursor: pointer;
+}
+
+/* Animation du bouton licences com qd on le survole */
+.bouton3:hover {
+    background-color: #ffb92b;
+}
+
+/* Bouton école com */
+.bouton4 {
+    left: 72%;
+    top: 30vw;
+    width: 15%;
+    border: solid #ff4f11 0.1vw;
+}
+
+/* Animation du bouton école com qd on le survole */
+.bouton4:hover {
+    background-color: #ff4f11;
+}
+
+/* Boutons licences et écoles tech */
+.bouton5,
+.bouton6 {
+    border: solid 0.1vw #8ce9ad;
+    top: 15vw;
+    left: 70%;
+}
+
+/* Animation du bouton licences pro tech */
+.bouton5:hover {
+    background-color: #8ce9ad;
+}
+
+/* Bouton écoles tech */
+.bouton6 {
+    border: solid 0.1vw #08bebe;
+    top: 29.35vw;
+    left: 25%;
+    width: 15%;
+}
+
+/* Animation du bouton écoles tech qd on le survole */
+.bouton6:hover {
+    background-color: #08bebe;
+}
+
+/* Page formulaire */
+.rerformulaire {
+    display: none;
+}
+
+/* Champs à remplir */
+.formulairenom {
+    height: 3vw;
+    width: 65%;
+    border-radius: 100vw;
+    border: none;
+    background-color: #c3e9ec;
+    font-size: 1.3vw;
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: bold;
+    position: absolute;
+    top: 2vw;
+    left: 17%;
+    text-align: center;
+}
+
+.formulaireemail {
+    top: 6vw;
+}
+
+.formulaireobjet {
+    top: 10vw;
+}
+
+.formulairecom {
+    position: absolute;
+    top: 14vw;
+    padding-top: 1%;
+    height: 10vw;
+    border-radius: 2vw;
+}
+
+/* Boutons accueil */
+.accueil,
+.accueil2 {
+    right: 90%;
+}
+
+/* Animation des boutons accueil qd on les survole */
+.accueil:hover,
+.accueil2:hover {
+    background-color: #ffb92b;
+}
+
+/* Phrase */
+.contactez {
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: bold;
+    font-size: 3vw;
+    position: absolute;
+    top: -1.5vw;
+    left: 38.7%;
+}
+
+/* Image de la borne dans la page contact */
+.borne {
+    width: 100%;
+    height: 100vw;
+    background: url(images/borne1.png) no-repeat center -25%/65%;
+}
+
+/* Ecran de la borne */
+.borneecran {
+    height: 22.48vw;
+    width: 31.5%;
+    position: absolute;
+    top: 11.5%;
+    left: 26.7%;
+    overflow: auto;
+    /* border: solid 0.5vw #333333;
+    border-radius: 1vw; */
+}
+
+/* Barre de scroll dans l'écran de la borne */
+.borneecran::-webkit-scrollbar {
+    /* Scrollbars */
+    width: 14px;
+    height: 14px;
+    background: #4b4b4b63;
+    border-radius: 100px;
+}
+
+.borneecran::-webkit-scrollbar-thumb {
+    background: #ffbc90;
+    border-radius: 100vw;
+}
+
+.borneecran::-webkit-scrollbar-thumb:hover {
+    background: #ffa96f;
+}
+
+/* Logo MMItinéraire de la page formulaire */
+.logoformulaire,
+.logocv {
+    position: absolute;
+    top: 15.6vw;
+    left: 63%;
+    width: 8%;
+}
+
+/* Logo MMItinéraire dans la page cv */
+.logocv {
+    width: 8%;
+    top: 2vw;
+    left: 86%;
+}
+
+/* Enlever la bordure bleu qd on focus un bouton, input ou textarea */
+button:focus,
+input:focus,
+textarea:focus,select:focus {
+    outline: 0;
+}
+
+/* Changer la couleur du placeholder */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: rgb(88, 88, 88);
+}
+
+/* Bouton envoyer */
+.envoyer {
+    position: absolute;
+    top: 26vw;
+    left: 35%;
+    width: 30%;
+    height: 3vw;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Balsamiq Sans', cursive;
+    border-radius: 100vw;
+    background-color: #47a2ab;
+    cursor: pointer;
+    margin-bottom: 2vw;
+    /* box-shadow: 0px 1px 5px #666666; */
+}
+
+/* Animation du bouton envoyer qd on le survole */
+.envoyer:hover {
+    background-color: #8ce9ad;
+}
+
+/* Page des CV */
+.rercv {
+    display: none;
+}
+
+/* Page liste des formations écoles com */
+.rer3ecole {
+    transform: translate(-125%, 54vw);
+    /* transform: translateY(64vw); */
+    z-index: 50;
+}
+
+/* Rail écoles et licences com*/
+.railjaune,
+.railjaune2,
+.railjaune3,
+.railjaune4,
+.railjaune5,
+.railjaune6,
+.railjaune7,
+.railjaune8,
+.railjaune9,
+.railjaune10,
+.railjaune11,
+.railjaune12,
+.railjaune13,
+.railjaune14,
+.railjaune15,
+.railjaune16,
+.railjaune17,
+.railjaune18,
+.railjaune19,
+.railjaune20,
+.railjaune21,
+.railjaune22,
+.railjaune23,
+.railjaune24,
+.railjaune25,
+.railjaune26,
+.railjaune27,
+.railjaune28,
+.railjaune29,
+.railjaune30,
+.railjaune31,
+.railrougelicence {
+    position: absolute;
+    width: 12.1%;
+    min-width: 10%;
+    float: right;
+    z-index: 50;
+    left: 70.8%;
+}
+
+.railjaune2 {
+    top: 64vw;
+}
+
+.railjaune3 {
+    top: 128vw;
+}
+
+.railjaune4 {
+    top: 192vw;
+}
+
+.railjaune23 {
+    top: 256vw;
+}
+
+.railjaune5 {
+    top: 320vw;
+}
+
+.railjaune6 {
+    top: 384vw;
+}
+
+.railjaune7 {
+    top: 448vw;
+}
+
+.railjaune8 {
+    top: 512vw;
+}
+
+.railjaune9 {
+    top: 576vw;
+}
+
+.railjaune10 {
+    top: 640vw;
+}
+
+.railjaune11 {
+    top: 704vw;
+}
+
+.railjaune12 {
+    top: 768vw;
+}
+
+.railjaune13 {
+    top: 832vw;
+}
+
+.railjaune14 {
+    top: 896vw;
+}
+
+.railjaune15 {
+    top: 960vw;
+}
+
+.railjaune16 {
+    top: 1024vw;
+}
+
+.railjaune17 {
+    top: 1088vw;
+}
+
+.railjaune18 {
+    top: 1152vw;
+}
+
+.railjaune19 {
+    top: 1216vw;
+}
+
+.railjaune20 {
+    top: 1280vw;
+}
+
+.railjaune21 {
+    top: 1344vw;
+}
+
+.railjaune22 {
+    top: 1408vw;
+}
+
+.railjaune24 {
+    top: 1472vw;
+}
+
+.railjaune25 {
+    top: 1536vw;
+}
+
+.railjaune26 {
+    top: 1600vw;
+}
+
+.railjaune27 {
+    top: 1664vw;
+}
+
+.railjaune28 {
+    top: 1728vw;
+}
+
+.railjaune29 {
+    top: 1792vw;
+}
+
+.railjaune30 {
+    top: 1856vw;
+}
+
+.railjaune31 {
+    top: 1920vw;
+}
+
+/* Bouton retour école com */
+.retour3ecole {
+    left: -3%;
+    top: 2vw;
+}
+
+/* Page liste des formations licences com */
+.rer3licence {
+    transform: translate(-155%);
+    /* transform: translateY(64vw); */
+    z-index: 50;
+}
+
+/* Rail licences com */
+.railrougelicence {
+    width: 27%;
+    min-width: 10%;
+    left: 120%;
+    top: 12.4vw;
+}
+
+/* Page liste des formations écoles tech*/
+.rer4ecole {
+    transform: translate(107%, 40vw);
+    /* transform: translateY(64vw); */
+    z-index: 50;
+}
+
+/* Rail écoles et licences tech */
+.railvert,
+.railvert2,
+.railvert3,
+.railvert4,
+.railvert5,
+.railbleulicence {
+    position: absolute;
+    width: 12.7%;
+    min-width: 10%;
+    float: right;
+    z-index: 50;
+    left: 0%;
+}
+
+.railvert2 {
+    top: 69vw;
+}
+
+.railvert3 {
+    top: 138vw;
+}
+
+.railvert4 {
+    top: 207vw;
+}
+
+.railvert5 {
+    top: 276vw;
+}
+
+/* Bouton retour écoles et licences tech */
+.retour4ecole,
+.retour4licence {
+    left: 80%;
+    top: 2vw;
+    background-color: #47a2ab;
+    min-width: 6vw;
+}
+
+/* Animation des bouton retour écoles et licences tech qd on les survole*/
+.retour4ecole:hover,
+.retour4licence:hover {
+    background-color: #8ce9ad;
+}
+
+/* Billet formation licences et écoles */
+.billetlicence,
+.billetecole,
+.billetecole2,
+.billetlicence2 {
+    position: relative;
+    width: 70%;
+    max-height: 25vw;
+    min-height: 25vw;
+    border-radius: 1.5vw;
+    margin: auto;
+    margin-bottom: 2vw;
+    top: 8vw;
+    background: transparent;
+    background-color: #ffffff;
+    background: url(images/fond2.svg);
+    background-size: cover;
+    box-shadow: 0.2vw 0.2vw 0.6vw #a3a3a3;
+}
+
+/* Titre du billet licences */
+.licencenom,
+.licencenom2 {
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 1.5vw;
+    padding: 1.5%;
+    position: relative;
+    font-size: 1.5vw;
+    font-family: "DM Mono", monospace;
+    color: black;
+    text-align: left;
+    padding-left: 13%;
+    margin: 0;
+    background-color: #08bebe;
+    width: 85.5%;
+    text-transform: uppercase;
+}
+
+/* Paragraphes à l'intérieur d'un billet */
+.matieres,
+.matieres2,
+.debouches,
+.debouches2,
+.url,
+.formation,
+.etablissement,
+.localisation,
+.formation2 {
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    width: 58%;
+    font-size: 1vw;
+    font-family: "DM Mono", monospace;
+    color: black;
+    margin: 0;
+    margin-left: 2%;
+    margin-top: 1vw;
+    display: block;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.debouches {
+    top: 13vw;
+}
+
+/* Billet écoles */
+.matieres2,
+.debouches2,
+.formation2 {
+    margin-top: 1.5vw;
+}
+
+/* Titre des paragraphes */
+.titrematiere {
+    color: black;
+    font-size: 1.25vw;
+    /* text-decoration: underline #8ce9ad; */
+    text-transform: uppercase;
+}
+
+/* Lien externe "En savoir plus" */
+.url {
+    position: absolute;
+    text-align: center;
+    font-size: 1.25vw;
+    top: 20vw;
+    left: 74%;
+    border: none;
+    width: 10vw;
+}
+
+/* Animation du lien externe */
+.url:hover {
+    color: white;
+}
+
+/* Billet licences */
+.formation,
+.etablissement,
+.localisation {
+    position: absolute;
+    border: none;
+    left: 66%;
+    width: 20vw;
+    top: 4.6vw;
+    margin-top: 1vw;
+}
+
+/* Billet écoles */
+.localisation {
+    margin-top: -1vw;
+}
+
+.etablissement {
+    top: 4vw;
+}
+
+.localisation {
+    top: 14vw;
+}
+
+/* Demi cercle au dessu et en dessous des traits pointillés */
+.rond1,
+.rond2 {
+    height: 2vw;
+    width: 2vw;
+    background-color: #ffe9ce;
+    position: absolute;
+    border-radius: 100vw;
+    left: 65%;
+    top: 24.1vw;
+    z-index: 100;
+    box-shadow: inset 0.2vw 0.2vw 0.3vw #a3a3a3
+}
+
+/* Demi cercle du haut */
+.rond2 {
+    top: -1.1vw;
+    box-shadow: none;
+}
+
+/* Pour cacher l'ombre du demi cercle du bas */
+.rond1bis {
+    position: absolute;
+    background-color: #ffe9ce;
+    height: 1vw;
+    width: 1vw;
+    top: 1.2vw;
+    left: -0.2vw;
+    transform: rotate(70deg);
+}
+
+/* Traits pointillés */
+.zip {
+    position: absolute;
+    height: 22.8vw;
+    /* width: ; */
+    border-right: dashed #ffe9ce 2px;
+    top: 1.2vw;
+    right: 22.8vw;
+    z-index: 100;
+}
+
+/* Logo MMItinéraire sur le billet */
+.logobillet {
+    position: absolute;
+    width: 5vw;
+    z-index: 100;
+    top: 0.5vw;
+    left: 2%;
+}
+
+/* Bande blanche en bas du billet */
+.bandeblanche {
+    background-color: white;
+    height: 1.5vw;
+    width: 100%;
+    position: absolute;
+    top: 23.5vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+
+}
+
+/* Code barre sur le billet */
+.code {
+    width: 11vw;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 12vw;
+    z-index: 100;
+    left: 55%;
+}
+
+ul {
+    margin: 0;
+}
+
+/* Page liste des formations licences tech */
+.rer4licence {
+    transform: translate(138%);
+}
+
+/* Rail licences tech */
+.railbleulicence {
+    width: 31.2%;
+    left: -22%;
+    top: 9.8vw;
+}
+
+/* Billets licences */
+.billetlicence {
+    top: 20vw;
+}
+
+/* Bouton retour licences tech */
+.retour4licence {
+    top: 13vw;
+}
+
+/* Rails licences tech */
+.railbleulicence2,
+.railbleulicence3,
+.railbleulicence4,
+.railbleulicence5,
+.railbleulicence6,
+.railbleulicence7,
+.railbleulicence8,
+.railbleulicence9,
+.railbleulicence10,
+.railbleulicence11,
+.railbleulicence12 {
+    position: absolute;
+    width: 12.2%;
+    left: -2.7%;
+    top: 55.8vw;
+}
+
+.railbleulicence3 {
+    top: 119vw;
+}
+
+.railbleulicence4 {
+    top: 181.8vw;
+}
+
+.railbleulicence5 {
+    top: 244.6vw;
+}
+
+.railbleulicence6 {
+    top: 307.4vw;
+}
+
+.railbleulicence7 {
+    top: 370.2vw;
+}
+
+.railbleulicence8 {
+    top: 433vw;
+}
+
+.railbleulicence9 {
+    top: 495.8vw;
+}
+
+.railbleulicence10 {
+    top: 558.6vw;
+}
+
+.railbleulicence11 {
+    top: 621.4vw;
+}
+
+.railbleulicence12 {
+    top: 684.2vw;
+}
+
+/* Billet écoles com */
+.billetecole2,
+.billetlicence2 {
+    left: -20%;
+    background: url(images/fond3.svg);
+}
+
+.licencenom2 {
+    background-color: #ff6831;
+}
+
+/* Bouton retour licences com */
+.retour3licence {
+    left: 47%;
+    top: 13vw;
+}
+
+/* Rails licences com */
+.railrougelicence2,
+.railrougelicence3,
+.railrougelicence4,
+.railrougelicence5,
+.railrougelicence6,
+.railrougelicence7,
+.railrougelicence8,
+.railrougelicence9,
+.railrougelicence10,
+.railrougelicence11,
+.railrougelicence12,
+.railrougelicence13 {
+    position: absolute;
+    width: 11.2%;
+    left: 119.9%;
+    top: 53vw;
+}
+
+.railrougelicence3 {
+    top: 104vw;
+}
+
+.railrougelicence4 {
+    top: 155vw;
+}
+
+.railrougelicence5 {
+    top: 206vw;
+}
+
+.railrougelicence6 {
+    top: 257vw;
+}
+
+.railrougelicence7 {
+    top: 308vw;
+}
+
+.railrougelicence8 {
+    top: 359vw;
+}
+
+.railrougelicence9 {
+    top: 410vw;
+}
+
+.railrougelicence10 {
+    top: 461vw;
+}
+
+.railrougelicence11 {
+    top: 512vw;
+}
+
+.railrougelicence12 {
+    top: 563vw;
+}
+
+.railrougelicence13 {
+    top: 614vw;
+}
+
+.billetlicence2 {
+    top: 20vw;
+    left: 30%;
+}
+.liste_déroulante_tech{
+    position: absolute;
+    left: 17.5%;
+    padding-right: 1%;
+    background-color: #47a2ab;
+    top: 2vw;
+}
+
+.liste_déroulante_établissement{
+ left: 32%;
+}
+.liste_déroulante_mode{
+    left: 61%;
+}
+.liste_déroulante_mode_inté{
+    left: 58%;
+}
+.liste_déroulante_algo{
+    left: 39%;
+}
+.liste_déroulante_com{
+    position: absolute;
+    left: 5%;
+    padding-right: 1%;
+    top: 2vw;
+}
+.liste_déroulante_établissement_com{
+    left: 21%;
+}
+
+.liste_déroulante_mode_com{
+    left: 46.5%;
+}
+.liste_déroulante_com::-webkit-scrollbar {
+    /* Scrollbars */
+    width: 1vw;
+    background: #4b4b4b63;
+    border-radius: 100px;
+}
+
+.liste_déroulante_com::-webkit-scrollbar-thumb {
+    background: #ff6e2bb2;
+    border-radius: 100vw;
+}
+
+.liste_déroulante_com::-webkit-scrollbar-thumb:hover {
+    background: #ffb92b;
+}
+.remonter_lic_tech,.remonter_eco_tech,.remonter_lic_com,.remonter_eco_com{
+    position: relative;
+    z-index: 100;
+    top: 22vw;
+left: 40%;
+width: 8vw;
+margin: auto;
+text-align: center;
+}
+.remonter_eco_tech{
+    top: 12vw;
+}
+.remonter_lic_com{
+    top: 24vw;
+    left: 80%;
+}
+.remonter_eco_com{
+    top: 12vw;
+    left: 35%;
+}

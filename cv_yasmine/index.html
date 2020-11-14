@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Parisienne&display=swap" rel="stylesheet"> 
+
+<head>
+    <meta charset="UTF-8">
+    <title>CV Intéractif</title>
+    <style>
+
+@font-face{
+    font-family: 'parisienne';
+    src: url('Parisienne-Regular.ttf') format('ttf');
+    }
+
+       *, ::after, ::before {
+            box-sizing: border-box; 
+        }
+        
+        a {
+            border: black 2px solid;
+            font-family: 'Parisienne', cursive; 
+            color: black;
+            text-decoration: none;
+            font-size: 35px;
+            text-align: center; 
+            display: block;
+            height: 50px; 
+            overflow: hidden;
+            margin: 3% auto 0 auto;
+            transition: all 1s ease;
+            border-radius: 0%; 
+        }
+        
+        a:hover {
+            height: 300px;
+            background-color: white;
+            color:#07324d ;
+        } 
+        img {
+            margin-left: 580px;
+            width: 150px; 
+        }
+        body {
+            background-image: url(fond2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .logo {
+            position: absolute;
+            top: 0.5em;
+            right: 1%;
+            width: 5%;
+        }
+        .Nom {
+            font-family: 'Parisienne', cursive;
+            font-size: 25px;
+        }
+        p {
+            font-family: 'Dancing Script', cursive;
+            text-align: left;
+            margin: 2% ;
+        }
+        .formulaire{
+            
+            text-align: center;
+            font-family: 'Parisienne', cursive;
+            font-size: 30px;
+            height: 230px;
+            border: solid 2px;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+
+    <img class="logo" src="logo.png" alt="" />
+
+    <img src="profil.png" alt="" />  
+
+</div>
+
+    <center class="Nom">Yasmine Kourichi</center> 
+      
+    <a href="#">
+        <strong>- Formation -</strong>
+    <p> Entre 2019 et 2020, j'ai effectué une année en DUT MMI (Métiers du Multimédia et de l’Internet) à l'IUT de l’Université Gustave Eiffel (77), à laquelle j'ai étudié le marketing, l'intégration Web, la communication ou encore la production audiovisuelle. En 2019, j'ai obtenu une licence mention Histoire à l'Université de Paris (75013), après avoir terminé ma deuxième année de prépa (CPGE A/L) en 2018 au Lycée Léon Blum (94).
+    </p>
+    </a>
+
+    <a href="#">
+        <strong>- Expérience professionnelle -</strong>
+    <p> Durant 3 ans entre août 2017 et juillet 2019, à chaque été, j'ai travaillé comme agent administratif chez Essilor Internation dans trois services différents, à savoir le service Import/Export, le service Marketing et le service Recherche & Développement. En DUT MMI, à l'occasion du projet tutoré j'ai été cheffe de projet. </p>
+    </a>
+
+    <a href="#">
+        <strong>- Compétences spécifiques -</strong>
+        <p>J'ai de bonnes connaissances en anglais. Je maîtrise les logiciels tels que Word, Power Point, Excel, Adobe XD, Photoshop et Wordpress. J'ai des bases en HTML et en CSS. Enfin, j'ai des compétences en gestion de projet et j'ai des aptitudes à travailler en équipe.</p>
+    </a>
+
+    <a href="#">
+        <strong>- Autres centres d'intérêts -</strong>
+    <p>J'effectue des travaux manuels (rafistoler un objet en mauvais état ou cassé, couture, dessin), j'aime lire des romans policier et des bandes dessinées, je suis une passionnée de cinéma (policier, historique, science-fiction, fantastique, film d’animation) et j'aime découvrir de nouveaux pays comme l'Allemagne, l'Angleterre, l'Italie, l'Espagne, la Grèce ou encore la Turquie.</p>
+    </a>
+ <br>
+ <br>
+    <div class="formulaire" >
+        
+        <form action="formulaire.php" method="POST" >   
+        <strong>- Formulaire de contact -</strong>
+              
+        <div>
+            <label for="mail">E-mail</label>
+            <input type="email" id="mail" name="user_mail">
+        </div>          
+        <div>
+            <label for="name">Sujet</label>
+            <input type="text" id="name" name="user_name">
+        </div>      
+        <div>    
+            <label for="msg">Message</label>
+            <textarea id="msg" name="user_message"></textarea>
+        </div> 
+        <div>            
+            <class="center">
+            <input type="submit" value="Envoyer">  
+        </div>  
+       
+        </form>
+    </div>  
+    
+
+</body>
+
+</html>

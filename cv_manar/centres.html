@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
+  <title>CV Manar Bassimane</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fff4d0;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #632525;
+      text-align: center;
+      font-family: 'Bellota', cursive;
+      font-size: 3.2em;
+      margin-top: 0;
+    }
+
+    img {
+      max-width: 27%;
+      height: auto; /*éviter déformation de l'image*/
+      animation: opacity 2s;
+      -moz-webkit-o-animation: opacity 2s;
+    }
+
+    div {
+      margin: auto;
+      max-width: 70%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+
+    @keyframes opacity {
+      from {
+        opacity: 0%;
+
+      }
+
+      to {
+        opacity: 100%;
+      }
+    }
+
+    .button {
+      font-family: 'Bellota', cursive;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 2px 2px 2px rgb(206, 172, 127);
+      background: linear-gradient(#f8eabd 0%,
+          #fff2d9 24%,
+          #f0e8bd 41%,
+          #f8daa1 100%);
+      width: 60px;
+      height: 25px;
+      cursor:pointer;
+
+      transition: ease, transform 0.2s;
+    }
+
+    .button:focus {
+      outline: none;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      transition: ease, transform 0.2s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="index.html"><input class="button" type="button" value="Accueil"></a>
+
+  <h1>Mes centres d'intérêts</h1>
+  <div>
+    <img class="vyg" src="img/voyage.png" alt="voyage">
+    <img class="ptg" src="img/audiovisuel.png" alt="audiovisuel">
+    <img class="lng" src="img/langues.png" alt="langues">
+    <img class="ecr" src="img/ecriture.png" alt="écriture">
+    <img class="lct" src="img/lecture.png" alt="lecture">
+    <img class="bnv" src="img/benevolat.png" alt="bénévolat">
+
+  </div>
+
+</body>
+
+</html>
